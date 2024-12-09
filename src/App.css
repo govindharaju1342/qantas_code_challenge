@@ -1,0 +1,164 @@
+.airport_list_wrapper {
+  background-color: #f6f6f6;
+  padding: 16px 0;
+}
+.airport_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  gap: 16px;
+  min-height: 120px;
+  width: 1000px;
+}
+.airport_item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 200px;
+  column-gap: 20px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  padding: 8px 20px;
+  align-items: center;
+}
+.airport_item > span {
+  margin-bottom: 8px;
+}
+.airport_name_code {
+  font-weight: 600;
+  line-height: 28px;
+  font-size: 18px;
+  color: #323232;
+}
+
+.airport_status {
+  font-weight: 600;
+  line-height: 28px;
+  font-size: 14px;
+  color: #323232;
+  padding: 8px 5px;
+}
+
+.airport_status_false {
+  text-decoration: line-through;
+  text-decoration-color: #e40000;
+  text-decoration-thickness: 2px;
+}
+
+.airport_status_true {
+  color: #00a000;
+}
+
+.goto_details {
+  border-left: 1px solid #e40000;
+  padding-left: 10px;
+  background: #ffffff;
+}
+.goto_details_btn, .goto_list_btn {
+  font-family: "Abel", sans-serif;
+  color: #e40000;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  padding-left: 10px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.goto_details_btn::after {
+  content: ">>";
+  margin-left: 5px;
+}
+
+.airport_details_wrapper {
+  margin: 0 auto;
+  width: 1000px;
+  background-color: #f6f6f6;
+ 
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+
+}
+.airport_details_wrapper h1 {
+    font-size: 32px;
+    color: #323232;
+    margin: 20px;
+}
+.airport_details { 
+    padding: 20px;
+}
+.airport_details_status {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.goto_list {
+    border-top: 1px solid #e40000;
+    width: 100%;
+    text-align: center;
+    padding: 10px 8px;
+    margin-top: 10px;
+    background: #ffffff;
+}
+.airport_details_box {
+    margin-top: 10px;
+    border-top: 1px solid #e40000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+ 
+
+@media screen and (max-width: 660px) {
+  .airport_list_wrapper,
+  .airport_item {
+    min-width: 320px;
+  }
+  .airport_list, .airport_details_wrapper {
+    width: 90%;
+  }
+  .airport_item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .airport_status {
+    font-size: 12px;
+  }
+  .airport_name_code {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+  }
+  .goto_details {
+    border-left: none;
+    border-top: 1px solid #e40000;
+    width: 100%;
+    text-align: center;
+    padding: 10px 8px;
+    margin-top: 10px;
+  }
+  .goto_details_btn::after {
+    content: "";
+    margin-left: 0;
+  }
+  .airport_status_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .airport_details_status {
+    flex-wrap: wrap;
+  }
+  .airport_details_status {
+    display: grid;
+    columns: 1fr 1fr;
+  }
+  .airport_details_box div{
+    width: 100%;
+  }
+  
+}

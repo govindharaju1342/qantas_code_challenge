@@ -1,0 +1,40 @@
+ .header {
+  width: 100%;
+  padding: 6px 0;
+  height: 72px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF; 
+  justify-content: space-between;
+ }
+ .logo {
+    height: 40px;
+ }
+ .logo_one_world {
+    height: 40px;
+    margin-left: 32px;
+ }
+ .search-box {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+
+}
+.search-box:focus {
+    outline: 4px solid #8de2e0;
+}
+
+@media screen and (max-width:660px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        gap: 16px;
+        align-items: center;
+        width: 100%;
+    }
+}
