@@ -7,6 +7,14 @@ This project is a React application designed to provide Qantas customers with th
 - Mobile responsive design
 - Fetch data from an API
 
+## Environment Variable
+
+Create a `.env` file parallel to the `src` folder.
+
+```
+REACT_APP_RESET_API_URL=https://api.qantas.com
+```
+
 ## Installation
 
 1. Clone the repository:
