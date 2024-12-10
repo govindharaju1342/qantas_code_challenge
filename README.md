@@ -29,12 +29,12 @@ This project is a React application designed to provide Qantas customers with th
 ## Usage
 
 1. Start the development server:
-    ```sh
+     ```sh
     npm start
-    ```
+    ``` 
     or 
 
-      ```sh
+     ```sh
    yarn start
 ``` 
     
