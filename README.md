@@ -19,7 +19,7 @@ This project is a React application designed to provide Qantas customers with th
     ```
 3. Install dependencies:
     ```sh
-    npm install or yarn install
+    npm install
     ``` 
     or 
 
@@ -34,9 +34,9 @@ This project is a React application designed to provide Qantas customers with th
     ```
     or 
 
-     ```sh
-    yarn start
-    ```
+      ```sh
+   yarn start
+``` 
     
 2. Open your browser and navigate to `http://localhost:3000`
 
