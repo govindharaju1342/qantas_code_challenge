@@ -20,14 +20,24 @@ This project is a React application designed to provide Qantas customers with th
 3. Install dependencies:
     ```sh
     npm install or yarn install
-    ```
+    ``` 
+    or 
 
+     ```sh
+   yarn install
+``` 
 ## Usage
 
 1. Start the development server:
     ```sh
-    npm start or yarn start
+    npm start
     ```
+    or 
+
+     ```sh
+    yarn start
+    ```
+    
 2. Open your browser and navigate to `http://localhost:3000`
 
 ## API
