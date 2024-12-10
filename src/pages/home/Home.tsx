@@ -8,7 +8,7 @@ const limit = 100;
 
 const Home: FC = () => {
   const [endpoint, setEndpoint] = useState<string>("");
-  const { data, loading, error } = useAirportData(endpoint, 'airportData');
+  const { data, loading, error } = useAirportData(endpoint, "airportData");
   const [displayedData, setDisplayedData] = useState<AirportData[]>([]);
   const [page, setPage] = useState<number>(1);
 
@@ -60,7 +60,10 @@ const Home: FC = () => {
     navigate(`/details/${airportCode}`);
   };
   return (
-    <div className="airport_list_wrapper" aria-labelledby="airport-list-heading">
+    <div
+      className="airport_list_wrapper"
+      aria-labelledby="airport-list-heading"
+    >
       <h1 id="airport-list-heading">Airport List</h1>
       {loading && <LoadingComp />}
       {error && <p>Error: {error}</p>}
@@ -73,8 +76,17 @@ const Home: FC = () => {
               role="listitem"
               aria-labelledby={`airport-${airport.airportCode}`}
             >
-              <span id={`airport-${airport.airportCode}`} className="airport_name_code">
+              <span
+                id={`airport-${airport.airportCode}`}
+                className="airport_name_code"
+              >
                 {airport.airportName} - {airport.airportCode}
+              </span>
+              <span
+                id={`airport-${airport.airportCode}`}
+                className="airport_country_code"
+              >
+                {airport.country.countryName} - {airport.country.countryCode}
               </span>
               <div className="airport_status_wrapper">
                 <span

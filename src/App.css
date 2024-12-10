@@ -13,10 +13,11 @@
   gap: 16px;
   min-height: 120px;
   width: 1000px;
+  text-align: left;
 }
 .airport_item {
   display: grid;
-  grid-template-columns: 1fr 1fr 200px;
+  grid-template-columns: 1fr 1fr 1fr 200px;
   column-gap: 20px;
   width: 100%;
   background-color: #ffffff;
@@ -34,7 +35,10 @@
   font-size: 18px;
   color: #323232;
 }
-
+.airport_country_code {
+    color: #e40000; 
+    font-weight: 600;
+}
 .airport_status {
   font-weight: 600;
   line-height: 28px;
@@ -129,7 +133,7 @@
   .airport_status {
     font-size: 12px;
   }
-  .airport_name_code {
+  .airport_name_code, .airport_country_code {
     width: 100%;
     text-align: center;
     font-size: 24px;
