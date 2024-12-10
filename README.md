@@ -7,6 +7,11 @@ This project is a React application designed to provide Qantas customers with th
 - Mobile responsive design
 - Fetch data from an API
 
+## Domain
+```
+https://main.d1dzujdiostjz5.amplifyapp.com
+```
+
 ## Environment Variable
 
 Create a `.env` file parallel to the `src` folder.
