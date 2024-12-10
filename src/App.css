@@ -1,6 +1,7 @@
 .airport_list_wrapper {
   background-color: #f6f6f6;
   padding: 16px 0;
+  text-align: center;
 }
 .airport_list {
   display: flex;

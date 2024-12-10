@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { SearchContext } from "../../context/SearchContext";
 
@@ -8,7 +8,7 @@ import "./Header.css";
 const Header: React.FC = () => {
   const searchContext = useContext(SearchContext);
   const location = useLocation();
-
+  const navigate = useNavigate();
   if (!searchContext) {
     throw new Error("SearchContext must be used within a SearchProvider");
   }
@@ -28,6 +28,7 @@ const Header: React.FC = () => {
           className="logo"
           src="https://www.qantas.com/content/dam/qantas/logos/qantas-masterbrand-logo-40px.svg"
           alt="qantas logo"
+          onClick={() => navigate("/")}
         />
         <img
           className="logo_one_world"

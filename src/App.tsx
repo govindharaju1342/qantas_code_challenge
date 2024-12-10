@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/home";
-import Details from "./pages/details";
+import Home from "./pages/home/Home";
+import Details from "./pages/details/Details";
 import Header from "./components/Header/Header";
 import "./App.css";
 import { SearchProvider } from "./context/SearchContext";
@@ -10,7 +10,7 @@ function App() {
     <SearchProvider>
 
       <Router>
-      <div className="App">
+      <div className="App" aria-labelledby="airport-app">
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />

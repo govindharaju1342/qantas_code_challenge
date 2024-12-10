@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAirportData } from "../../lib/hooks/useAirportData";
 import { SearchContext } from "../../context/SearchContext";
 import { AirportData } from "../../type/airport.type";
+import LoadingComp from "../../components/Loading/Loading";
 const limit = 100;
 
 const Home: FC = () => {
@@ -59,8 +60,9 @@ const Home: FC = () => {
     navigate(`/details/${airportCode}`);
   };
   return (
-    <div className="airport_list_wrapper">
-      {loading && <p>Loading...</p>}
+    <div className="airport_list_wrapper" aria-labelledby="airport-list-heading">
+      <h1 id="airport-list-heading">Airport List</h1>
+      {loading && <LoadingComp />}
       {error && <p>Error: {error}</p>}
       {displayedData && (
         <div className="airport_list">
@@ -68,8 +70,10 @@ const Home: FC = () => {
             <div
               className="airport_item"
               key={`${airport.airportCode}-${index}`}
+              role="listitem"
+              aria-labelledby={`airport-${airport.airportCode}`}
             >
-              <span className="airport_name_code">
+              <span id={`airport-${airport.airportCode}`} className="airport_name_code">
                 {airport.airportName} - {airport.airportCode}
               </span>
               <div className="airport_status_wrapper">
@@ -123,6 +127,7 @@ const Home: FC = () => {
                 <button
                   className="goto_details_btn"
                   onClick={() => handleDetailsClick(airport.airportCode)}
+                  aria-label={`View details for ${airport.airportName}`}
                 >
                   view airport
                 </button>

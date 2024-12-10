@@ -1,9 +1,13 @@
-import { FC, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { AirportData } from "../../type/airport.type";
-
-const Details: FC = () => {
-  const { airportCode } = useParams<{ airportCode: string }>();
+import LoadingComp from "../../components/Loading/Loading";
+interface DetailsProps {
+  airportCodePrams?: string;
+}
+const Details: React.FC<DetailsProps> = (props) => {
+  const { airportCodePrams } = props;
+  const { airportCode } = useParams<{ airportCode: string }>() || airportCodePrams;
   const [airportDetails, setAirportDetails] = useState<AirportData | null>(
     null
   );
@@ -28,12 +32,12 @@ const Details: FC = () => {
   };
 
   if (!airportDetails) {
-    return <div>Loading...</div>;
+    return <LoadingComp />;
   }
 
   return (
-    <div className="airport_details_wrapper">
-      <h1>
+    <div className="airport_details_wrapper" aria-labelledby="airport-details-heading">
+      <h1 id="airport-details-heading">
         {airportDetails.airportName} ({airportDetails.airportCode})
       </h1>
       <div className="airport_details">
