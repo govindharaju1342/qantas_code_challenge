@@ -23,9 +23,10 @@ This project is a React application designed to provide Qantas customers with th
     ``` 
     or 
 
-     ```sh
-   yarn install
-``` 
+    ```sh
+    yarn install
+    ``` 
+
 ## Usage
 
 1. Start the development server:
@@ -35,9 +36,9 @@ This project is a React application designed to provide Qantas customers with th
     ``` 
     or 
 
-     ```sh
-   yarn start
-``` 
+    ```sh
+    yarn start
+    ``` 
     
 2. Open your browser and navigate to `http://localhost:3000`
 
